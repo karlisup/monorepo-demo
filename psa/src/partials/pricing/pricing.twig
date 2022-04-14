@@ -1,0 +1,61 @@
+<div class="pricing" id="pricing">
+	<div class="big-gap"></div>
+	<div class="left-indent size-9 pricing__badge">
+		{% include "../badge/badge.twig" %}
+		<h2 class="pricing__title">Take your 3D art to the next level</h2>
+	</div>
+	<div class="pricing__wrapper">
+		<div class="left-indent size-9">
+			<ul class="pricing__plans">
+				<li>
+					<div class="pricing__body">
+						<h3 class="pricing__name">Basic</h3>
+						<ul>
+							<li>PSA addon</li>
+							<li>Free updates</li>
+							<li><a href="https://discord.gg/wvzPVzj9Vr" target="_blank" rel="noreferrer">Community support</a></li>
+						</ul>
+					</div>
+					<footer class="pricing__footer">
+						<p>Buy it once, use it forever</p>
+						<div class="pricing__price" {{ promo ? 'data-before="58.00$"' : '' }}>{{ promo ? '43.50$' : '58.00$' }}</div>
+						<a href="https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2891" class="btn btn--primary">Buy Now</a>
+					</footer>
+				</li>
+				<li>
+					<div class="pricing__body">
+						<h3 class="pricing__name">Studio</h3>
+						<ul>
+							<li>Same as Basic plan</li>
+							<li class="plus">+</li>
+							<li>Multi-seat license</li>
+							<li>Early access to new features</li>
+							<li>Email support</li>
+						</ul>
+					</div>
+					<footer class="pricing__footer">
+						<p>For your team</p>
+						<div class="pricing__price" {{ promo ? 'data-before="328.00$"' : '' }}>{{ promo ? '246.00$' : '328.00$' }}</div>
+						<a href="https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2892" class="btn btn--secondary">Buy Now</a>
+					</footer>
+				</li>
+				<li>
+					<div class="pricing__body">
+						<h3 class="pricing__name">Enterprise</h3>
+						<ul>
+							<li>Same as Studio plan</li>
+							<li class="plus">+</li>
+							<li>Prioritized feature/bug requests</li>
+							<li>Priority support</li>
+						</ul>
+					</div>
+					<footer class="pricing__footer">
+						<p>For large businesses</p>
+						<div class="pricing__price">2048.00$</div>
+						<a href="https://www.physicaladdons.com/psa/contacts/" class="btn btn--secondary">Get in touch</a>
+					</footer>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

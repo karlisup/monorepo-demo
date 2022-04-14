@@ -1,0 +1,72 @@
+{% set timeline = [
+    {
+        'empty': true,
+        'title': 'Model',
+        'link': '#preset-model',
+        'duration': 1.5
+    },
+    {
+        'empty': false,
+        'title': 'Earth',
+        'link': '#preset-earth',
+        'duration': 4
+    },
+    {
+        'empty': false,
+        'title': 'Night',
+        'link': '#preset-night',
+        'duration': 4
+    },
+    {
+        'empty': false,
+        'title': 'Nishita',
+        'link': '#preset-nishita',
+        'duration': 4
+    },
+    {
+        'empty': false,
+        'title': 'Mars',
+        'link': '#preset-mars',
+        'duration': 4
+    },
+    {
+        'empty': false,
+        'title': 'Retro',
+        'link': '#preset-retro',
+        'duration': 4
+    },
+] %} 
+
+<div class="timeline">
+    {% for element in timeline %}
+    <a href="{{element.link}}" class="timeline__section{{ element.empty ? ' timeline__section--empty' : '' }}" data-duration="{{element.duration}}" title="{{element.title}}">
+        <div class="timeline__progress"></div>
+    </a>
+    {% endfor %}
+    {# <a href="#preset-earth" class="timeline__section" data-duration="4" title="Earth">
+        <div class="timeline__progress"></div>
+    </a>
+    <a href="#preset-earth1" class="timeline__section" data-duration="4" title="Earth #2">
+        <div class="timeline__progress"></div>
+    </a>
+
+    <a href="#preset-night" class="timeline__section" data-duration="4" title="Night">
+        <div class="timeline__progress"></div>
+    </a>
+    <a href="#preset-night1" class="timeline__section" data-duration="4" title="Night #2">
+        <div class="timeline__progress"></div>
+    </a>
+    <a href="#preset-night2" class="timeline__section" data-duration="4" title="Night #3">
+        <div class="timeline__progress"></div>
+    </a>
+
+    <a href="#preset-nishita" class="timeline__section" data-duration="4" title="Nishita">
+        <div class="timeline__progress"></div>
+    </a>
+    <a href="#preset-nishita1" class="timeline__section" data-duration="4" title="Nishita #2">
+        <div class="timeline__progress"></div>
+    </a>
+    <a href="#preset-retrowave" class="timeline__section" data-duration="4" title="Retro">
+        <div class="timeline__progress"></div>
+    </a> #}
+</div>

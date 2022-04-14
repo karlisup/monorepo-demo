@@ -1,0 +1,93 @@
+{% set testimonials = [
+    {
+        'active': true,
+        'id': 'ben-mauro',
+        'fullname': 'Ben Mauro',
+        'jobtitle': 'Senior Concept Artist at 343 Industries',
+        'body': 'Physical Starlight and Atmosphere has been an invaluable tool for me in my personal/professional work and a huge missing link for lighting in Blender. It still feels like magic every time I use it, I can\'t recommend it highly enough!',
+        'image': {
+            'src':'assets/images/testimonials/ben-mauro',
+            'alt':'Ben Mauro'
+        }
+    },
+    {
+        'active': false,
+        'id': 'james-tralie',
+        'fullname': 'James Tralie',
+        'jobtitle': 'Planetary Science Producer and Animator at NASA',
+        'body': 'Physical Starlight and Atmosphere has been an essential add-on for all of my environmental design projects. It gives me such incredibly flexibility and control over the look and feel of my renders. Lighting is key for any project, and this add-on always gives my work that extra edge.',
+        'image': {
+            'src':'assets/images/testimonials/james-tralie',
+            'alt':'James Tralie'
+        }
+    },
+    {
+        'active': false,
+        'id': 'scott-warren',
+        'fullname': 'Scott Warren',
+        'jobtitle': 'Senior Lighting Artist at Turtle Rock Studios',
+        'body': 'As a lighting artist, focusing on the overall mood of an image is super important. Physical Starlight and Atmosphere is based on reality, so I can spend all of my time iterating on the look without worrying about how to achieve it.
+',
+        'image': {
+            'src':'assets/images/testimonials/scott-warren',
+            'alt':'Scott Warren'
+        }
+    },
+    {
+        'active': false,
+        'id': 'ryan-richmond',
+        'fullname': 'Ryan Richmond',
+        'jobtitle': 'Concept Artist',
+        'body': 'I love the tool. It has been my go-to since I picked it up a couple of months ago.',
+        'image': {
+            'src':'assets/images/testimonials/ryan-richmond',
+            'alt':'Ryan Richmond'
+        }
+    },
+    {
+        'active': false,
+        'id': 'subin-rajendran',
+        'fullname': 'Subin Rajendran',
+        'jobtitle': 'Concept Artist',
+        'body': 'My work life has become super easier since I started using Physical Starlight and Atmosphere, it cut down a lot of technical headache associated with setting up a believable lighting condition and gave me more time to concentrate on the creative part of my design process.',
+        'image': {
+            'src':'assets/images/testimonials/subin-rajendran',
+            'alt':'Subin Rajendran'
+        }
+    }
+]%}
+
+<div class="testimonials">
+    <div class="left-indent size-6">
+        <h2 class="testimonials__title">Used by industry leaders on daily basis.</h2>
+{#        <div class="testimonials__container">#}
+
+{#        </div>#}
+        <div class="testimonials__list">
+            {% for testimonial in testimonials %}
+            <figure class="testimonials__figure {{ testimonial.active ? 'testimonials__figure--active' : '' }}" tabindex="0">
+                <figcaption class="testimonials__author">
+                    <img
+                        src="{{ testimonial.image.src }}-200.jpg"
+                        alt="{{ testimonial.image.alt }}"
+						srcset="
+							{{ testimonial.image.src }}-100.jpg 100w,
+							{{ testimonial.image.src }}-200.jpg 200w
+						"
+						sizes="
+							(max-width: 576px) 82px,
+							100px
+						"
+                    />
+                    <div>{{ testimonial.fullname }}</div>
+                    <div>{{ testimonial.jobtitle }}</div>
+                    <div>{{ testimonial.knownfor }}</div>
+                </figcaption>
+                <blockquote class="testimonials__blockquote">
+                    "{{ testimonial.body }}"
+                </blockquote>
+            </figure>
+            {% endfor %}
+        </div>
+    </div>
+</div>

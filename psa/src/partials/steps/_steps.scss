@@ -1,0 +1,19 @@
+.steps {
+  position: relative;
+  margin-top: 36px;
+  max-width: 410px;
+  min-height: 60px;
+  &__description {
+    position: absolute;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: $color-text-alt;
+    &.animatable {
+      transition: none;
+      &--active {
+        transition: opacity 1s ease-in-out;;
+      }
+    }
+  }
+}

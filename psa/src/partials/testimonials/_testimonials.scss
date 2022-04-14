@@ -1,0 +1,94 @@
+.testimonials {
+	overflow: hidden;
+	@include respond-below(xs) {
+		padding-top: 48px;
+		background-color: #191919;
+	}
+
+
+	&__title {
+		@extend .h2;
+		padding-bottom: 80px;
+		@include respond-below(xs) {
+			padding-bottom: 48px;
+		}
+	}
+
+	&__list {
+		//position: absolute;
+		display: flex;
+		transition: transform .3s ease-in-out;
+		@include respond-below(xs) {
+			flex-direction: column;
+		}
+	}
+	&__figure {
+		box-sizing: border-box;
+		flex: none;
+		width: 100%;
+		padding: 36px;
+		padding-right: 20%;
+		background-color: rgba(#191919, .5);
+		border-right: 2px solid black;
+		transition: background-color .3s ease-in-out;
+		opacity: .5;
+		user-select: none;
+		&:hover {
+			background-color: rgba(#191919, 1);
+			cursor: pointer;
+		}
+		&--active {
+			opacity: 1;
+			&:hover {
+				background-color: rgba(#191919, .5);
+				cursor: default;
+			}
+		}
+		@include respond-below(xs) {
+			padding: 0 0 48px 0;
+			flex: auto;
+			background-color: transparent;
+			border-right: none;
+			opacity: 1;
+		}
+	}
+		&__author {
+			overflow: hidden; // quick clearfix
+			margin-bottom: 72px;
+			@include respond-below(xs) {
+				margin-bottom: 24px;
+			}
+			> img {
+				float: left;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				@include respond-below(xs) {
+					width: 82px;
+					height: 82px;
+				}
+			}
+			> div {
+				margin-left: 136px;
+				color: $color-text-alt;
+				font-size: 16px;
+				line-height: 1.6;
+				&:first-of-type {
+					margin-top: 8px;
+					color: $color-text;
+				}
+				@include respond-below(xs) {
+					font-size: 14px;
+					margin-left: 96px;
+				}
+			}
+		}
+		&__blockquote {
+			font-size: 20px;
+			line-height: 1.6;
+			color: $color-text-alt;
+			@include respond-below(xs) {
+				font-size: 16px;
+			}
+		}
+}

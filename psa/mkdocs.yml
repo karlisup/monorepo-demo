@@ -1,0 +1,62 @@
+site_name: Physical Starlight and Atmosphere
+site_dir: psa
+theme:
+  name: material
+  custom_dir: theme-extension
+  favicon: img/favicon.svg
+  logo: img/psa-logo.svg
+  palette:
+    primary: black
+  features:
+    - tabs
+plugins:
+  - search
+site_url: https://www.physicaladdons.com/psa/
+google_analytics: ['UA-86947939-2', 'auto']
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.keys
+  - attr_list
+  - abbr
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: true
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started.md
+    - Customization: customization.md
+    - Updating: updating.md
+    - Frequently Asked Questions: faq.md
+  - Documentation:
+    - Overview: overview.md
+    - Presets: presets.md
+    - Sun: sun.md
+    - Binary Sun: binary-sun.md
+#    - Atmosphere: atmosphere.md
+    - Ground: ground.md
+#    - Stars: stars.md
+#    - Artistic Values: artistic-values.md
+    - Clouds: clouds.md
+  - Changelog:
+    - Release Notes: release-notes.md
+  - About:
+    - Physical Starlight and Atmosphere: about.md
+    - Contacts: contacts.md
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/home.css
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/PhysicalAddons
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/upitismartins_digital/
+    - icon: fontawesome/brands/github
+      link: https://github.com/PhysicalAddons/

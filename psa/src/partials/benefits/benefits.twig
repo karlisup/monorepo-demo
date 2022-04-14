@@ -1,0 +1,102 @@
+{% set benefits = [
+    {
+        'active': true,
+        'id': 'save-time',
+        'title': 'Save time',
+        'description': 'This addon saves hours that usually are invested in manually creating sky, atmosphere and placing sun object and stars, and automates it within a single click.',
+        'image': {
+            'src':'assets/images/benefits/click',
+            'alt':'Save time'
+        }
+    },
+    {
+        'active': false,
+        'id': 'by-professionals',
+        'title': 'By professionals',
+        'description': 'We have more than a decade of experience with atmosphere rendering techniques in computer graphics industry. Physical Starlight and Atmosphere addon is used in entertainment, film, automotive, aerospace and architectural visualisation industries.',
+        'image': {
+            'src':'assets/images/benefits/artists',
+            'alt':'By professionals'
+        }
+    },
+    {
+        'active': false,
+        'id': 'premade-presets',
+        'title': 'Premade presets',
+        'description': 'Presets allow to store a snapshot of your customized atmosphere settings and return to it later or use already predefined presets provided by the addon.',
+        'image': {
+            'src':'assets/images/benefits/presets',
+            'alt':'Premade presets'
+        }
+    },
+    
+    {
+        'active': false,
+        'id': 'highly-customizable',
+        'title': 'Highly customizable',
+        'description': 'We use a procedural method of calculating the atmosphere based on many tweakable parameters, so that sky color is not limited only to the Earth\'s atmosphere.',
+        'image': {
+            'src':'assets/images/benefits/customize',
+            'alt':'Highly customizable'
+        }
+    },
+    {
+        'active': false,
+        'id': 'control-weather-and-time',
+        'title': 'Control time and weather',
+        'description': 'Works well in combination with Blender Sun Position addon. You can simulate any weather at any time.',
+        'image': {
+            'src':'assets/images/benefits/timeofday',
+            'alt':'Control time and weather'
+        }
+    }
+] %}
+
+<div class="cut-overflow">
+    <div class="left-indent size-6">
+        <div class="benefits">
+            <h2 class="benefits__title">Benefits</h2>
+            <div class="benefits__list">
+                {% for benefit in benefits %}
+                <a
+                    href="javascript:void(0)"
+                    class="benefits__header"
+                    id="benefit-header-{{ benefit.id }}"
+                    aria-expanded="{{ benefit.active }}"
+                    aria-controls="benefit-panel-{{ benefit.id }}"
+                >
+                    <h3>{{ benefit.title }}</h3>
+                    <p>{{ benefit.description }}</p>
+                </a>
+                <section
+                        class="benefits__panel"
+                        id="benefit-panel-{{ benefit.id }}"
+                        aria-labelledby="benefit-header-{{ benefit.id }}"
+                        {{ benefit.active ? '' : 'hidden' }}
+                >
+                    <a href="{{ benefit.image.src }}-845.jpg" data-fancybox="benefits-{{ benefit.id }}">
+                   <img 
+                        src="{{ benefit.image.src }}-845.jpg"
+                        srcset="
+                            {{ benefit.image.src }}-365.jpg 365w,
+                            {{ benefit.image.src }}-475.jpg 475w,
+                            {{ benefit.image.src }}-845.jpg 845w
+                        "
+                        
+                        sizes="
+                            (max-width: 576px) 364px,
+                            (max-width: 930px) 52.8vw,
+                            33.vw
+                        "
+                        alt="{{ benefit.image.alt }}"
+                   />
+                   </a>
+                    
+                </section>
+                {% endfor %}
+            </div>
+            <a href="#pricing" class="benefits__cta btn btn--primary">Explore plans</a>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+// .videoplayer {
+//   text-align: center;
+//   position:relative;
+//   video {
+//     box-sizing: border-box;
+//     max-width: 100%;
+//     border-radius: 20px;
+//     border: 14px solid #141414;
+
+//     cursor: pointer;
+//     &:focus {
+//       outline: none;
+//     }
+//   }
+// }
+
+
+.videoplayer {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  &:before {
+    display: block;
+    content: "";
+    padding-top: 56.25%; // 16:9 = 9 / 16 = 56.25%
+  }
+  > iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+
+    // box-sizing: border-box;
+    // border-radius: 20px;
+    // border: 14px solid #141414;
+  }
+}

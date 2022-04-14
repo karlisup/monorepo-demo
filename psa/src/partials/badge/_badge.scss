@@ -1,0 +1,38 @@
+$diameter: 232px;
+$diameter-t: 180px;
+$diameter-m: 150px;
+.badge {
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-decoration: none;
+
+    background-color: #312DFF;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(-16deg);
+    // transition: transform .1s ease-in-out;
+    // &:hover {
+    //     transform: rotate(8deg);
+    // }
+    &__title {
+        font-size: 16px;
+    }
+    &__subtitle {
+        margin-top: 4px;
+        font-size: 10px
+    }
+
+    @include respond-below(sm) {
+        width: $diameter-t;
+        height: $diameter-t;
+    }
+    @include respond-below(mm) {
+        width: $diameter-m;
+        height: $diameter-m;
+    }
+}
