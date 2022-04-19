@@ -1,8 +1,7 @@
-site_name: Physical Starlight and Atmosphere
-site_dir: psa
+site_name: Physical Celestial Objects
+site_dir: pco
 theme:
   name: material
-  custom_dir: theme-extension
   favicon: img/favicon.svg
   logo: img/psa-logo.svg
   palette:
@@ -11,8 +10,6 @@ theme:
     - tabs
 plugins:
   - search
-site_url: https://www.physicaladdons.com/psa/
-google_analytics: ['UA-86947939-2', 'auto']
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -28,30 +25,7 @@ markdown_extensions:
   - toc:
       permalink: true
 nav:
-  - Home: index.md
-  - Getting Started:
-    - Installation: getting-started.md
-    - Customization: customization.md
-    - Updating: updating.md
-    - Frequently Asked Questions: faq.md
-  - Documentation:
-    - Overview: overview.md
-    - Presets: presets.md
-    - Sun: sun.md
-    - Binary Sun: binary-sun.md
-#    - Atmosphere: atmosphere.md
-    - Ground: ground.md
-#    - Stars: stars.md
-#    - Artistic Values: artistic-values.md
-    - Clouds: clouds.md
-  - Changelog:
-    - Release Notes: release-notes.md
-  - About:
-    - Physical Starlight and Atmosphere: about.md
-    - Contacts: contacts.md
-extra_css:
-  - stylesheets/extra.css
-  - stylesheets/home.css
+  - Getting Started: getting-started.md
 extra:
   social:
     - icon: fontawesome/brands/twitter
