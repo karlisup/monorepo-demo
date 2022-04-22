@@ -1,0 +1,36 @@
+site_name: Physical Starlight and Atmosphere
+site_dir: build/psa
+theme:
+  name: material
+  favicon: img/favicon.svg
+  logo: img/psa-logo.svg
+  palette:
+    primary: black
+  features:
+    - tabs
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.keys
+  - attr_list
+  - abbr
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: true
+nav:
+  - Getting Started: getting-started.md
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/PhysicalAddons
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/upitismartins_digital/
+    - icon: fontawesome/brands/github
+      link: https://github.com/PhysicalAddons/
