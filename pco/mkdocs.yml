@@ -1,5 +1,5 @@
 site_name: Physical Celestial Objects
-site_dir: public
+site_dir: build
 theme:
   name: material
   favicon: img/favicon.svg
