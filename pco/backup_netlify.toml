@@ -3,7 +3,7 @@
   base = "pco"
   command = "mkdocs build --clean"
   functions = "netlify/functions"
-  publish = "/."
+  publish = "pco/."
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
